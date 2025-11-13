@@ -19,11 +19,16 @@ curl -Ls https://raw.githubusercontent.com/eishare/tuic-hy2-node.js-python/main/
 
 * TUIC版本：1.6.2 官方更新说明（原文直译）：
 
-  🐛 错误修复
-     （服务器）发送 FIN 以作废stream reset by peer
-
-   ⚙️ 杂项任务
-      将日志更改为跟踪
+🐛 错误修复
+（服务器）解决身份验证等待机制中的竞态条件
+⚡ 性能
+将 chashmap 替换为 moka@Itsusinn
+🛠️ 建造
+（依赖项）将 rust-dependencies 组更新 3 次
+（依赖项）将 actions-dependencies 组更新 2 次
+⚙️ 其他任务
+使用 cargo-zigbuild 为 amd64 linux gnu@Itsusinn
+缓存 Docker 层并更新 macOS Runner@Itsusinn
 
 ```
 curl -Ls https://raw.githubusercontent.com/xiaowen-king/tuic-hy2-node.js-python/main/tuic.sh | sed 's/\r$//' | bash
